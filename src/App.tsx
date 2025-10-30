@@ -1,23 +1,15 @@
 import "./App.css";
-import { Button, ColorRed } from "./components";
+import CustomForm from "./components/customForm/CustomForm";
 
 function App() {
-  const handleClick = () => {
-    console.log("Button clicked!");
-  };
-
-  const dimeHola = () => {
-    alert("Hola!");
-  }
 
   return (
-    <>
-      <ColorRed><Button parentMethod={dimeHola}>Mi boton Rojo</Button></ColorRed>
-      <Button parentMethod={handleClick}>Mi boton normal</Button>
-      {/* <Button parentMethod={handleClick}>
-        <ColorRed><div>My label</div></ColorRed>
-      </Button> */}
-    </>
+    <div className="app-container">
+      <div className="form-wrapper">
+        <h2>Registro de Usuario</h2>
+        <CustomForm />
+      </div>
+    </div>
   );
 }
 
